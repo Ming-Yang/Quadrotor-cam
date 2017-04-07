@@ -1,6 +1,4 @@
-#include "wiringPi.h"
-#include "wiringSerial.h"
-#include "iostream"
+#include "gpio.h"
 using namespace std;
 
 int fd;
