@@ -60,8 +60,8 @@ int main()
 void Init()
 {
 	cout << "begin..." << endl;
-	while (ReadPara("../para.txt"));
-	while (PreImageGet("../R3.jpg", "../L3.jpg"));
+	while (ReadPara("../data/para.txt"));
+	while (PreImageGet("../data/R3.jpg", "../data/L3.jpg"));
 	StereoParaCal();
 
 	while (RectifyCorrespondence());
