@@ -8,6 +8,7 @@
 #include <iomanip>
 #include <stdio.h>
 #include <stdlib.h>
+#include <../gpio/gpio.h>
 //#include <mouse.h>
 
 #define _SHOW_RAW_IMG 0
@@ -51,6 +52,7 @@ int main()
 	while (RectifyCorrespondence());
 	cout << ObstacleCheck(5000, 20, 10000, 300) << endl;
 
+	UARTPrintf();
 	cout << "ok" << endl;
 
 	while (1);
@@ -59,6 +61,7 @@ int main()
 
 void Init()
 {
+	UARTInit();
 	cout << "begin..." << endl;
 	while (ReadPara("../data/para.txt"));
 	while (PreImageGet("../data/R3.jpg", "../data/L3.jpg"));

@@ -16,8 +16,3 @@ int UARTPrintf()
 }
 
 
-int main()
-{
-	UARTInit();
-	UARTPrintf();
-}
