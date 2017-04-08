@@ -1,5 +1,5 @@
-#include "../include/gpio.h"
-#include "../include/image.h"
+#include "../includes/gpio.h"
+#include "../includes/image.h"
 
 using namespace std;
 using namespace cv;

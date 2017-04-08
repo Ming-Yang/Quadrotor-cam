@@ -1,4 +1,4 @@
-#include "../include/gpio.h"
+#include "../includes/gpio.h"
 using namespace std;
 
 int fd;
