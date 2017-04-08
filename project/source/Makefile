@@ -2,13 +2,16 @@ CC = g++
 DLIBS = -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_calib3d -lwiringPi -lpthread
 OBJS = main.o gpio.o image.o 
 
-pi-check : main.cpp $(OBJS)
-	$(CC) main.c $(OBJS) -o pi-check
+pi-check : $(OBJS)
+	$(CC) $(OBJS) $(DLIBS) -o pi-check
 	
-image.o : image.cpp
+main : main.cpp
+	$(CC) -c main.cpp $(DLIBS)  
+
+image : image.cpp
 	$(CC) -c image.cpp $(DLIBS)  
 
-gpio.o : gpio.cpp 
+gpio : gpio.cpp 
 	$(CC) -c gpio.cpp $(DLIBS)  
 
 clean:
