@@ -5,5 +5,7 @@
 #include "wiringSerial.h"
 #include "iostream"
 
+int UARTInit();
+void UARTPrintf();
 
 #endif

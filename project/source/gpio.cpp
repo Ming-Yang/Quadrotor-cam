@@ -1,4 +1,4 @@
-#include "gpio.h"
+#include "../include/gpio.h"
 using namespace std;
 
 int fd;
@@ -10,7 +10,7 @@ int UARTInit()
 	return fd;
 }
 
-int UARTPrintf()
+void UARTPrintf()
 {
 	serialPrintf(fd,"data:");
 }
