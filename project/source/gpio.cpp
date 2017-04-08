@@ -6,7 +6,7 @@ int UARTInit()
 {	
 	wiringPiSetup();
 	fd = serialOpen("/dev/serial0",115200);
-	cout<<"fd="<<fd<<endl;
+	serialPrintf(fd,"\nInitOK\n");
 	return fd;
 }
 
