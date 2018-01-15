@@ -1,21 +1,8 @@
-#include "../include/gpio.h"
-#include "../include/image.h"
+#include "../includes/gpio.h"
+#include "../includes/image.h"
 
 using namespace std;
 using namespace cv;
-
-int main()
-{
-	Init();
-	while (RectifyCorrespondence());
-	cout << ObstacleCheck(5000, 20, 10000, 300) << endl;
-
-	UARTPrintf();
-	cout << "ok" << endl;
-
-	while (1);
-	return 0;
-}
 
 void Init()
 {
@@ -31,3 +18,18 @@ void Init()
 
 	cout << "ok" << endl;
 }
+
+int main()
+{
+	Init();
+	while (RectifyCorrespondence());
+	cout << ObstacleCheck(5000, 20, 10000, 300) << endl;
+
+	UARTPrintf();
+	cout << "ok" << endl;
+
+	while (1);
+	return 0;
+}
+
+

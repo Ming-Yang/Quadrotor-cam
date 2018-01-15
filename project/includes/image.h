@@ -13,6 +13,7 @@
 #include <stdlib.h>
 //#include <mouse.h>
 
+using namespace cv;
 
 extern Mat cameraMatrix1, cameraMatrix2, distCoeffs1, distCoeffs2, OM, R, T;
 extern Mat Rl, Rr, Pl, Pr, Q;
@@ -26,7 +27,7 @@ extern Size imsize;
 extern Mat bw_img, contours_bw_img;
 extern vector< vector<Point> > contours, contours_tiny ;
 extern vector<Point> merge_points;
-extern vector < vector<Point> > merge_obstacle(1);
+extern vector < vector<Point> > merge_obstacle;
 extern Point center;
 
 
@@ -39,7 +40,6 @@ bool RectifyCorrespondence();
 void saveDisp(const char*, const Mat&);
 Point3i ObstacleCheck(int, int,float,float);
 void StereoParaCal();
-void Init();
 Point FindCentre();
 Point myPointPolygonTest(InputArray, Point2f, bool);
 
